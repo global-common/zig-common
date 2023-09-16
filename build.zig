@@ -11,4 +11,6 @@ pub fn build(b: *std.build.Builder) !void {
     // register the module so it can be referenced
     // using the package manager.
     try b.modules.put(b.dupe("console"), console_module);
+    
+    _ = b.getInstallStep();
 }
